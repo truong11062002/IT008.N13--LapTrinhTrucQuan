@@ -1,0 +1,7 @@
+C:\IT008.N13\BTTLBuoi03\test\bin\Debug\test.exe.config
+C:\IT008.N13\BTTLBuoi03\test\bin\Debug\test.exe
+C:\IT008.N13\BTTLBuoi03\test\bin\Debug\test.pdb
+C:\IT008.N13\BTTLBuoi03\test\obj\Debug\test.csproj.AssemblyReference.cache
+C:\IT008.N13\BTTLBuoi03\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\IT008.N13\BTTLBuoi03\test\obj\Debug\test.exe
+C:\IT008.N13\BTTLBuoi03\test\obj\Debug\test.pdb

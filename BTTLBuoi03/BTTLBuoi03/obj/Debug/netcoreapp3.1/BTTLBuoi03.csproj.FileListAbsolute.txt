@@ -1,0 +1,15 @@
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\bin\Debug\netcoreapp3.1\BTTLBuoi03.exe
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\bin\Debug\netcoreapp3.1\BTTLBuoi03.deps.json
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\bin\Debug\netcoreapp3.1\BTTLBuoi03.runtimeconfig.json
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\bin\Debug\netcoreapp3.1\BTTLBuoi03.runtimeconfig.dev.json
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\bin\Debug\netcoreapp3.1\BTTLBuoi03.dll
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\bin\Debug\netcoreapp3.1\BTTLBuoi03.pdb
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.csproj.AssemblyReference.cache
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.GeneratedMSBuildEditorConfig.editorconfig
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.AssemblyInfoInputs.cache
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.AssemblyInfo.cs
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.csproj.CoreCompileInputs.cache
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.dll
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.pdb
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.genruntimeconfig.cache
+C:\IT008.N13\BTTLBuoi03\BTTLBuoi03\obj\Debug\netcoreapp3.1\BTTLBuoi03.csproj.ResolveComReference.cache
