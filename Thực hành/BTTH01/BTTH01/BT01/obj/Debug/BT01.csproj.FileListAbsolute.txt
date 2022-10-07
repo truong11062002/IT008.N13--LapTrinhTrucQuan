@@ -1,0 +1,7 @@
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\BT01\obj\Debug\BT01.csproj.AssemblyReference.cache
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\BT01\obj\Debug\BT01.csproj.CoreCompileInputs.cache
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\BT01\bin\Debug\BT01.exe.config
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\BT01\bin\Debug\BT01.exe
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\BT01\bin\Debug\BT01.pdb
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\BT01\obj\Debug\BT01.exe
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\BT01\obj\Debug\BT01.pdb

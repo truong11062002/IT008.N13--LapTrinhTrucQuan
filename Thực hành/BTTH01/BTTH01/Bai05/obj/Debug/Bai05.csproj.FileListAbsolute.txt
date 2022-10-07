@@ -1,0 +1,6 @@
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\Bai05\bin\Debug\Bai05.exe.config
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\Bai05\bin\Debug\Bai05.exe
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\Bai05\bin\Debug\Bai05.pdb
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\Bai05\obj\Debug\Bai05.csproj.CoreCompileInputs.cache
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\Bai05\obj\Debug\Bai05.exe
+C:\IT008.N13\Thực hành\BTTH01\BTTH01\Bai05\obj\Debug\Bai05.pdb
