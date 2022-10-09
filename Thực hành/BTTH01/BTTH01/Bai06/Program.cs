@@ -8,6 +8,7 @@ namespace Bai06
 {
     class Program
     {
+        
         public static int maxOfMatrix(int[,] matrix)
         {
             int max = 0;
@@ -23,6 +24,24 @@ namespace Bai06
                 }
             }
             return max;
+        }
+
+        public static int findColumeMaxOfMatrix(int[,] matrix)
+        {
+            int max = 0;
+            int max_column = 0;
+            for (int d = 0; d < matrix.GetLength(0); d++)
+            {
+                for (int c = 0; c < matrix.GetLength(1); c++)
+                {
+                    if (matrix[d, c] > max)
+                    {
+                        max = matrix[d, c];
+                        max_column = c;
+                    }
+                }
+            }
+            return max_column;
         }
 
         public static int minOfMatrix(int[,] matrix)
@@ -113,13 +132,50 @@ namespace Bai06
             }
             return sum;
         }
+
+        static public void XoaDongThuk(int[,] matrix, int k)
+        {
+            int dong = matrix.GetLength(0);
+            for(int i = k; i < matrix.GetLength(0) - 1; i++)
+            {
+                for(int j = 0; j< matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] = matrix[i + 1, j];
+                }
+            }
+            dong--;
+            showMatrix(matrix, dong, matrix.GetLength(1));
+        }
+
+        static public void showMatrix(int[,] matrix, int matrix_rows, int matrix_columns)
+        {
+            for (int dong = 0; dong < matrix_rows; dong++)
+            {
+                for (int cot = 0; cot < matrix_columns; cot++)
+                {
+                    Console.Write(matrix[dong, cot] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static public void Del_ColumnMaxElement(int[,] matrix, int cotCanXoa)
+        {
+            int m = matrix.GetLength(1);
+            for(int i = 0; i < matrix.GetLength(0); i++)
+                for(int j = cotCanXoa; j < matrix.GetLength(1) - 1; j++)
+                {
+                    matrix[i, j] = matrix[i, j + 1];
+                }
+            m--;
+            showMatrix(matrix, matrix.GetLength(0), m);
+        }
         static void Main(string[] args)
         {
             
 
             Console.WriteLine("Nhap so nguyen n: ");
             int n = int.Parse(Console.ReadLine());
-
             int matrix_rows = n;
             int matrix_columns = n;
 
@@ -142,14 +198,8 @@ namespace Bai06
                 }
             }
             // Cau a
-            for (int dong = 0; dong < matrix_rows; dong++)
-            {
-                for (int cot = 0; cot < matrix_columns; cot++)
-                {
-                    Console.Write(matrix[dong, cot] + "\t");
-                }
-                Console.WriteLine();
-            }
+
+            showMatrix(matrix, matrix_rows, matrix_columns);
 
             // Cau b
             int maxMatrix = maxOfMatrix(matrix);
@@ -160,17 +210,22 @@ namespace Bai06
 
             // Cau c
             List<int> result = sumMaxRow(matrix);
-
             Console.WriteLine("Dong " + (result[0] + 1) + " co tong lon nhat la: " + result[1]);
-
             // Cau d
             int sumNotNguyenTo = TongNotNguyenTo(matrix);
             Console.WriteLine("Tong cac so khong phai la nguyen to la: " + sumNotNguyenTo);
             // Cau e
 
 
+            Console.WriteLine("Nhap dong thu k can xoa: ");
+            int k = int.Parse(Console.ReadLine());
+            XoaDongThuk(matrix, k);
+
             // Cau f
 
+            int max_colume = findColumeMaxOfMatrix(matrix);
+            Console.WriteLine("Sau khi xoa cot thu {0} co phan tu lon nhat: ", max_colume + 1);
+            Del_ColumnMaxElement(matrix, max_colume);
             Console.ReadLine();
         }
     }

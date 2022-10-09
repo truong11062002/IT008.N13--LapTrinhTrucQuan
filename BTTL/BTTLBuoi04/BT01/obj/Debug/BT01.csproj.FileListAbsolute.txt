@@ -12,3 +12,10 @@ C:\IT008.N13\New folder\BTTLBuoi04\BT01\obj\Debug\BT01.csproj.AssemblyReference.
 C:\IT008.N13\New folder\BTTLBuoi04\BT01\obj\Debug\BT01.csproj.CoreCompileInputs.cache
 C:\IT008.N13\New folder\BTTLBuoi04\BT01\obj\Debug\BT01.exe
 C:\IT008.N13\New folder\BTTLBuoi04\BT01\obj\Debug\BT01.pdb
+C:\IT008.N13\BTTL\BTTLBuoi04\BT01\bin\Debug\BT01.exe.config
+C:\IT008.N13\BTTL\BTTLBuoi04\BT01\bin\Debug\BT01.exe
+C:\IT008.N13\BTTL\BTTLBuoi04\BT01\bin\Debug\BT01.pdb
+C:\IT008.N13\BTTL\BTTLBuoi04\BT01\obj\Debug\BT01.csproj.AssemblyReference.cache
+C:\IT008.N13\BTTL\BTTLBuoi04\BT01\obj\Debug\BT01.csproj.CoreCompileInputs.cache
+C:\IT008.N13\BTTL\BTTLBuoi04\BT01\obj\Debug\BT01.exe
+C:\IT008.N13\BTTL\BTTLBuoi04\BT01\obj\Debug\BT01.pdb
