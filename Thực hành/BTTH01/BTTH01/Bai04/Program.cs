@@ -36,6 +36,7 @@ namespace Bai04
 
             if (checkDate(nam, thang, 01))
             {
+                // Lấy ngày từ tháng và năm đã được nhập vào
                 int days = DateTime.DaysInMonth(nam, thang);
                 Console.WriteLine("So ngay cua thang {0} nam {1} la: {2}", thang, nam, days);
             }

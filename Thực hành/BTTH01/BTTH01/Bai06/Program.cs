@@ -172,8 +172,6 @@ namespace Bai06
         }
         static void Main(string[] args)
         {
-            
-
             Console.WriteLine("Nhap so nguyen n: ");
             int n = int.Parse(Console.ReadLine());
             int matrix_rows = n;
@@ -185,47 +183,49 @@ namespace Bai06
             {
                 for(int cot = 0; cot < matrix_columns; cot++)
                 {
-                    
-                    //int input;
-                    //Console.WriteLine("Nhap gia tri cho: ({0},{1})", dong, cot);
-                    //while (!int.TryParse(Console.ReadLine(), out input))
-                    //{
-                    //    Console.Write("Nhap gia tri dung cho ({0},{1}): ", dong, cot);
-                    //}
-                    //matrix[dong,cot] = input;
+
+                    /*
+                     int input;
+                    Console.WriteLine("Nhap gia tri cho: ({0},{1})", dong, cot);
+                    while (!int.TryParse(Console.ReadLine(), out input))
+                    {
+                        Console.Write("Nhap gia tri dung cho ({0},{1}): ", dong, cot);
+                    }
+                    matrix[dong, cot] = input;
+                     */
 
                     matrix[dong, cot] = random.Next(100);
                 }
             }
-            // Cau a
+            // Cau a: Xuất ma trận
 
             showMatrix(matrix, matrix_rows, matrix_columns);
 
-            // Cau b
+            // Cau b: Tìm phần tử lớn nhất
             int maxMatrix = maxOfMatrix(matrix);
             Console.WriteLine("Gia tri lon nhat cua ma tran la: " + maxMatrix);
-            
+            // Cau b: Tìm phần tử nhỏ nhất
             int minMatrix = minOfMatrix(matrix);
             Console.WriteLine("Gia tri nho nhat cua ma tran la: " + minMatrix);
 
-            // Cau c
+            // Cau c: Tìm dòng có tổng lớn nhất
             List<int> result = sumMaxRow(matrix);
             Console.WriteLine("Dong " + (result[0] + 1) + " co tong lon nhat la: " + result[1]);
-            // Cau d
+
+            // Cau d: Tính tổng các số không phải là số nguyên tố
             int sumNotNguyenTo = TongNotNguyenTo(matrix);
             Console.WriteLine("Tong cac so khong phai la nguyen to la: " + sumNotNguyenTo);
-            // Cau e
 
-
+            // Cau e: Xóa dòng thứ k trong ma trận
             Console.WriteLine("Nhap dong thu k can xoa: ");
             int k = int.Parse(Console.ReadLine());
             XoaDongThuk(matrix, k);
 
-            // Cau f
-
+            // Cau f: Xóa cột chứa phần tử lớn nhất trong ma trận
             int max_colume = findColumeMaxOfMatrix(matrix);
             Console.WriteLine("Sau khi xoa cot thu {0} co phan tu lon nhat: ", max_colume + 1);
             Del_ColumnMaxElement(matrix, max_colume);
+
             Console.ReadLine();
         }
     }

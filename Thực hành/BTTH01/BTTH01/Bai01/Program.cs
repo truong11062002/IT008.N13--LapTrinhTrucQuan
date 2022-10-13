@@ -15,6 +15,7 @@ namespace BT01
 
             int[] arr = new int[n];
 
+            // Random ngẫu nhiên
             Random rnd = new Random();
 
             for (int i = 0; i < n; i++)
@@ -23,15 +24,16 @@ namespace BT01
                 Console.WriteLine(arr[i]);
             }
 
+            // Câu a: Tính tổng các số lẻ trong mảng
             int TongSoLe = TongLe(n, arr);
-            int SLNguyenTo = TongNguyenTo(n, arr);
-
-
-
             Console.WriteLine("Tong so le: " + TongSoLe);
-            Console.WriteLine("So luong nguyen to la: {0}", SLNguyenTo);
-            findMinChinhPhuong(n, arr);
 
+            // Câu b: Đếm số nguyên tố trong mảng
+            int SLNguyenTo = TongNguyenTo(n, arr);
+            Console.WriteLine("So luong nguyen to la: {0}", SLNguyenTo);
+
+            // Câu c: Tìm số chính phương nhỏ nhất
+            findMinChinhPhuong(n, arr);
             Console.ReadLine();
         }
 
