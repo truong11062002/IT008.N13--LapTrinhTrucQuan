@@ -22,9 +22,8 @@ namespace Bai05
             {
                 return false;
             }
-
-
         }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Nhap ngay: ");
@@ -35,11 +34,11 @@ namespace Bai05
 
             Console.WriteLine("Nhap nam: ");
             int nam = int.Parse(Console.ReadLine());
-
+            
             if (checkDate(nam, thang, 01))
             {
-                DateTime Date = new DateTime(nam, thang, ngay);
-                Console.WriteLine("Thu {0} cua ngay {1} thang {2} nam {3}", Date.DayOfWeek, ngay, thang, nam);
+                DateTime dt = new DateTime(nam, thang, ngay);
+                Console.WriteLine("Ngay {0} thang {1} nam {2} la thu: {3}",ngay,thang,nam, dt.DayOfWeek);
             }
             else
             {

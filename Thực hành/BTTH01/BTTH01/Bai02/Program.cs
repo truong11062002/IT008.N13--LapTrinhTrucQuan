@@ -13,13 +13,14 @@ namespace Bai02
             Console.WriteLine("Nhap so nguyen n: ");
             int n = int.Parse(Console.ReadLine());
 
+            // Khởi tạo mảng có n phần tử
             int[] arr = new int[n];
-
             for (int i = 0; i < n; i++)
             {
                 arr[i] = int.Parse(Console.ReadLine());
             }
 
+            // Tổng số nguyên tố < n
             int Tong = TongNguyenTo(n, arr);
             Console.WriteLine("Tong nguyen to < n la: {0}", Tong);
         }
