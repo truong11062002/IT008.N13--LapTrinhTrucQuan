@@ -1,0 +1,9 @@
+C:\IT008.N13\Chess_Game\Chess_Game\bin\Debug\Chess_Game.exe.config
+C:\IT008.N13\Chess_Game\Chess_Game\bin\Debug\Chess_Game.exe
+C:\IT008.N13\Chess_Game\Chess_Game\bin\Debug\Chess_Game.pdb
+C:\IT008.N13\Chess_Game\Chess_Game\obj\Debug\Chess_Game.csproj.AssemblyReference.cache
+C:\IT008.N13\Chess_Game\Chess_Game\obj\Debug\Chess_Game.csproj.CoreCompileInputs.cache
+C:\IT008.N13\Chess_Game\Chess_Game\obj\Debug\Chess_Game.exe
+C:\IT008.N13\Chess_Game\Chess_Game\obj\Debug\Chess_Game.pdb
+C:\IT008.N13\Chess_Game\Chess_Game\obj\Debug\Chess_Game.Properties.Resources.resources
+C:\IT008.N13\Chess_Game\Chess_Game\obj\Debug\Chess_Game.csproj.GenerateResource.cache
