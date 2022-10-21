@@ -17,6 +17,8 @@ namespace Chess_Game
         public bool isMoving = false;
         public int currPlayer;
         public Button btn_restart = new Button();
+        
+        public int prevColor = 0;
 
         public int[,] map = new int[8, 8]
         {
@@ -48,6 +50,29 @@ namespace Chess_Game
             CreateMap();
         }
 
+        public void setColor()
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        if (j % 2 == 0)
+                            btns[i,j].BackColor = Color.White;
+                        else
+                            btns[i,j].BackColor = Color.BurlyWood;
+                    }
+                    else
+                    {
+                        if (j % 2 == 0)
+                            btns[i,j].BackColor = Color.BurlyWood;
+                        else
+                            btns[i,j].BackColor = Color.White;
+                    }
+                }
+            }
+        }
         public void CreateMap()
         {
             for (int i = 0; i < 8; i++)
@@ -59,6 +84,22 @@ namespace Chess_Game
                     Button btn = new Button();
                     btn.Size = new Size(50, 50);
                     btn.Location = new Point(j * 50, i * 50);
+
+                    if (i % 2 == 0)
+                    {
+                        if (j % 2 == 0)
+                            btn.BackColor = Color.White;
+                        else
+                            btn.BackColor = Color.BurlyWood;
+                    }
+                    else
+                    {
+                        if (j % 2 == 0)
+                            btn.BackColor = Color.BurlyWood;
+                        else
+                            btn.BackColor = Color.White;
+                    }
+
                     switch (map[i, j])
                     {
                         case 11:
@@ -115,25 +156,27 @@ namespace Chess_Game
                             break;
                     }
 
-                    btn.BackColor = Color.White;
+                    //btn.BackColor = Color.White;
                     btn.Click += new EventHandler(OnFigurePress);
                     this.Controls.Add(btn);
 
                     btns[i, j] = btn;
                 }
             }
+            
         }
 
+        
         public void OnFigurePress(object sender, EventArgs e)
         {
             // Bắt event click button
             Button pressedButton = sender as Button;
             // Nếu prevButton có giá trị thì set white lại cho nó
-            if (prevButton != null)
-                prevButton.BackColor = Color.White;
 
-            //Console.WriteLine(pressedButton.Location.Y);
-            //Console.WriteLine(map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50]); 
+            if (prevButton != null)
+            {
+                prevButton.BackColor = Color.White;
+            }
 
             // Check các vị trí có thể đổi màu
             if (map[pressedButton.Location.Y/50, pressedButton.Location.X/50] != 0 && map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50]/ 10 == currPlayer)
@@ -157,13 +200,12 @@ namespace Chess_Game
                     // Reset background cho đối tượng
                     prevButton.BackgroundImage = null;
 
-
                     isMoving = false;
                     SwitchPlayer();
                 }
             }
-            
 
+            setColor();
             prevButton = pressedButton;
         }
 
@@ -188,6 +230,7 @@ namespace Chess_Game
             btn_restart.Click += new EventHandler(btn_Click);
 
             this.Controls.Add(btn_restart);
+
             //chessSpires = new Bitmap("strategy.png");
             // btn1.BackgroundImage = part;
             //Image part = new Bitmap(50, 50);
