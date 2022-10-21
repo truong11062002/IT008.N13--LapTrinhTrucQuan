@@ -61,12 +61,12 @@ namespace Chess_Game
                         if (j % 2 == 0)
                             btns[i,j].BackColor = Color.White;
                         else
-                            btns[i,j].BackColor = Color.BurlyWood;
+                            btns[i,j].BackColor = Color.Silver;
                     }
                     else
                     {
                         if (j % 2 == 0)
-                            btns[i,j].BackColor = Color.BurlyWood;
+                            btns[i,j].BackColor = Color.Silver;
                         else
                             btns[i,j].BackColor = Color.White;
                     }
@@ -90,12 +90,12 @@ namespace Chess_Game
                         if (j % 2 == 0)
                             btn.BackColor = Color.White;
                         else
-                            btn.BackColor = Color.BurlyWood;
+                            btn.BackColor = Color.Silver;
                     }
                     else
                     {
                         if (j % 2 == 0)
-                            btn.BackColor = Color.BurlyWood;
+                            btn.BackColor = Color.Silver;
                         else
                             btn.BackColor = Color.White;
                     }
@@ -103,52 +103,52 @@ namespace Chess_Game
                     switch (map[i, j])
                     {
                         case 11:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.vuatrang;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.king_white;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 12:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.hautrang;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.queen_white;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 13:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.tuongtrang;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.bishop_white;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 14:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.nguatrang;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.knight_white;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 15:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.xetrang;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.rook_white;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 16:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.chottrang;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.pawn_white;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
 
                         case 21:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.vuaden;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.king_black;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 22:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.hauden;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.queen_black;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 23:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.tuongden;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.bishop_black;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 24:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.strategy;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.knight_black;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 25:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.xeden;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.rook_black;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
                         case 26:
-                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.chotden;
+                            btn.BackgroundImage = global::Chess_Game.Properties.Resources.pawn_black;
                             btn.BackgroundImageLayout = ImageLayout.Stretch;
                             break;
 
