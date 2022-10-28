@@ -100,5 +100,41 @@
   <ItemGroup>
     <None Include="bin\Debug\hautrang.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bishop_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knight_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knight_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pawn_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pawn_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rook_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rook_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bishop_black.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

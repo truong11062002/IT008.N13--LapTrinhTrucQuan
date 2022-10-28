@@ -1,0 +1,7 @@
+C:\IT008.N13\BTTLBuoi06\BTTLBuoi06\bin\Debug\BTTLBuoi06.exe.config
+C:\IT008.N13\BTTLBuoi06\BTTLBuoi06\bin\Debug\BTTLBuoi06.exe
+C:\IT008.N13\BTTLBuoi06\BTTLBuoi06\bin\Debug\BTTLBuoi06.pdb
+C:\IT008.N13\BTTLBuoi06\BTTLBuoi06\obj\Debug\BTTLBuoi06.csproj.AssemblyReference.cache
+C:\IT008.N13\BTTLBuoi06\BTTLBuoi06\obj\Debug\BTTLBuoi06.csproj.CoreCompileInputs.cache
+C:\IT008.N13\BTTLBuoi06\BTTLBuoi06\obj\Debug\BTTLBuoi06.exe
+C:\IT008.N13\BTTLBuoi06\BTTLBuoi06\obj\Debug\BTTLBuoi06.pdb
