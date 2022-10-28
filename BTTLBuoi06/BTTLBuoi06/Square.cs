@@ -18,7 +18,12 @@ namespace BTTLBuoi06
 
         public Piece Piece
         {
-
+            get { return _piece}
+            set
+            {
+                _piece = value;
+                if(_piece != null)
+            }
         }
 
 

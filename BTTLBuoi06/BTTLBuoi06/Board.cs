@@ -14,7 +14,7 @@ namespace BTTLBuoi06
         public const int DEFAULT_SQUARE_WIDTH = 64;
         public const int DEFAULT_SQUARE_HEIGHT = 64;
 
-        public Piece p;
+        protected Piece _piece;
         public Square[,] _square;
 
         protected int _squareWidth;
@@ -39,7 +39,7 @@ namespace BTTLBuoi06
             {
                 for (int j = 0; j < 8; j++)
                 {
-                    Square sq = new Square(c, this, p);
+                    Square sq = new Square(c, this, _piece);
                     sq.Width = _squareWidth;
                     sq.Height = _squareHeight;
 
