@@ -107,6 +107,14 @@ namespace Bai04
             phanSoKQ.mauSo = p1.mauSo * p2.tuSo;
             return phanSoKQ;
         }
+        public static bool operator >(PhanSo p1, PhanSo p2)
+        {
+            return (float)p1.tuSo / (float)p1.mauSo > (float)p2.tuSo / (float)p2.mauSo;
+        }
+        public static bool operator <(PhanSo p1, PhanSo p2)
+        {
+            return (float)p1.tuSo / (float)p1.mauSo < (float)p2.tuSo / (float)p2.mauSo;
+        }
         public PhanSo RutGonPhanSo()
         {
             PhanSo RutGon = new PhanSo();
@@ -144,19 +152,6 @@ namespace Bai04
         public bool SoSanh(PhanSo p)
         {
             return (float)tuSo / (float)mauSo > (float)p.tuSo / (float)p.mauSo;
-
-            //int x, y;
-
-            //if (mauSo != p.mauSo)
-            //{
-            //    x = tuSo * p.mauSo;
-            //    y = mauSo * p.tuSo;
-            //}
-            //else
-            //{
-            //    y = tuSo;
-            //    x = p.tuSo;
-            //}
         }
     }
 
@@ -176,7 +171,7 @@ namespace Bai04
                 Console.WriteLine("Phan so thu {0}", i + 1);
 
                 ps[i].NhapPhanSo();
-                ps[i].RutGonPhanSo();
+                ps[i] = ps[i].RutGonPhanSo();
             }
         }
 
@@ -190,7 +185,7 @@ namespace Bai04
             }
         }
 
-        public void HoanViPhanSo(PhanSo a, PhanSo b)
+        public void HoanViPhanSo(ref PhanSo a,ref PhanSo b)
         {
             PhanSo temp;
             temp = a;
@@ -199,13 +194,15 @@ namespace Bai04
         }
         public void SapXepTangDan()
         {
+            
             for (int i = 0; i < n - 1; i++)
             {
                 for (int j = 1; j < n; j++)
                 {
-                    if (ps[i].SoSanh(ps[j]) == true) // Nếu phân số trước đầu lớn hơn phân số sau
+                    if (ps[i] > ps[j]) // Nếu phân số trước đầu lớn hơn phân số sau
                     {
-                        HoanViPhanSo(ps[i], ps[j]); // Thực hiện hoán vị 2 phân số
+                        // Thực hiện hoán vị 2 phân số
+                        HoanViPhanSo(ref ps[i],ref ps[j]);
                     }
                 }
             }
@@ -233,40 +230,38 @@ namespace Bai04
             PhanSo p2 = new PhanSo();
             PhanSo p3 = new PhanSo();
 
+            // Tổng/Hiệu/Tích/Thương của 2 phân số
 
             //Console.WriteLine("Nhap phan so 1: ");
             //p1.NhapPhanSo();
-
             //Console.WriteLine("Nhap phan so 2: ");
             //p2.NhapPhanSo();
 
             //p3 = p3.Cong2PhanSo(p1, p2);
             //Console.WriteLine("Tong 2 phan so la: ");
             //p3.InPhanSo();
-
             //p3 = p3.Hieu2PhanSo(p1, p2);
             //Console.WriteLine("Hieu 2 phan so la: ");
             //p3.InPhanSo();
-
             //p3 = p3.Nhan2PhanSo(p1, p2);
             //Console.WriteLine("Nhan 2 phan so la: ");
             //p3.InPhanSo();
-
             //p3 = p3.Chia2PhanSo(p1, p2);
-            //Console.WriteLine("Chia 2 phan so la: ");
+            //Console.WriteLine("Thuong 2 phan so la: ");
             //p3.InPhanSo();
+
 
             DayPhanSo a = new DayPhanSo();
-
             a.Nhap();
-
+            // Câu 2: Sắp xếp phân số tăng dần
             a.SapXepTangDan();
-            a.Xuat();
+            
 
+            // Câu 1: Phân số lớn nhất
             Console.WriteLine("Phan so lon nhat la: ");
             a.TongLonNhat();
-            //p3 = a.PhanSoLonNhat();
-            //p3.InPhanSo();
+
+            a.Xuat();
             Console.ReadKey();
         }
     }

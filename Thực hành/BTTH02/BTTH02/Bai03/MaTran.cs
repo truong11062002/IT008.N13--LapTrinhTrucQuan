@@ -124,10 +124,10 @@ namespace Bai03
         {
             int count;
             List<int> listPrime = new List<int> { };
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < m; i++)
             {
                 count = 0;
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < n; j++)
                 {
                     
                     if (checkNguyenTo(matrix[i, j]))
