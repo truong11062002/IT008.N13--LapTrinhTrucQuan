@@ -6,289 +6,167 @@ using System.Threading.Tasks;
 
 namespace Bai05
 {
-
-    public class BDS
-    {
-        private string diaDiem;
-        private float giaBan;
-        private float dienTich;
-
-        public string DiaDiem
-        {
-            get { return diaDiem; }
-            set { diaDiem = value; }
-        }
-
-        public float GiaBan
-        {
-            get { return giaBan; }
-            set { giaBan = value; }
-        }
-
-        public float DienTich
-        {
-            get { return dienTich; }
-            set { dienTich = value; }
-        }
-
-        public BDS()
-        {
-
-        }
-        public BDS(string diaDiem, float giaBan, float dienTich)
-        {
-            this.diaDiem = diaDiem;
-            this.giaBan = giaBan;
-            this.dienTich = dienTich;
-        }
-
-        public virtual void Nhap()
-        {
-
-        }
-
-        public virtual void Xuat()
-        {
-
-        }
-    }
-
-    public class KhuDat : BDS
-    {
-        private int soLuongKhuDat;
-
-        public int SLKhuDat
-        {
-            get { return soLuongKhuDat; }
-            set { soLuongKhuDat = value; }
-        }
-
-        public KhuDat()
-        {
-
-        }
-        public KhuDat(string diaDiem, float giaBan, float dienTich) : base ( diaDiem, giaBan, dienTich)
-        {
-            
-        }
-
-        public override void Nhap()
-        {
-            Console.WriteLine("Nhap dia diem: ");
-            DiaDiem = Console.ReadLine();
-
-            do
-            {
-                Console.WriteLine("Nhap gia ban: (VND)");
-                GiaBan = float.Parse(Console.ReadLine());
-            } while (GiaBan < 0);
-            do
-            {
-                Console.WriteLine("Nhap dien tich: (m2)");
-                DienTich = float.Parse(Console.ReadLine());
-            } while (DienTich <= 0);
-            
-        }
-
-        public override void Xuat()
-        {
-            Console.WriteLine("Dia diem la: " + DiaDiem);
-            Console.WriteLine("Gia ban la: {0} VND", GiaBan);
-            Console.WriteLine("Dien tich la: {0} m2", DienTich);
-        }
-    }
-
-    public class NhaPho : BDS
-    {
-        private int namXayDung;
-        private int soTang;
-        private int soLuongNhaPho;
-
-        public int NamXayDung
-        {
-            get { return namXayDung; }
-            set { namXayDung = value; }
-        }
-
-        public int SoTang
-        {
-            get { return soTang; }
-            set { soTang = value; }
-        }
-
-        public int SLNhaPho
-        {
-            get { return soLuongNhaPho; }
-            set { soLuongNhaPho = value; }
-        }
-
-        public NhaPho()
-        {
-
-        }
-        
-        public NhaPho(string diaDiem, float giaBan, float dienTich, int NamXayDung, int SoTang) : base(diaDiem, giaBan, dienTich)
-        {
-            this.NamXayDung = NamXayDung;
-            this.SoTang = SoTang;
-        }
-
-
-        public override void Nhap()
-        {
-            Console.WriteLine("Nhap dia diem: ");
-            DiaDiem = Console.ReadLine();
-
-            do
-            {
-                Console.WriteLine("Nhap gia ban: (VND)");
-                GiaBan = float.Parse(Console.ReadLine());
-            } while (GiaBan < 0);
-            do
-            {
-                Console.WriteLine("Nhap dien tich: (m2)");
-                DienTich = float.Parse(Console.ReadLine());
-            } while (DienTich <= 0);
-
-            do
-            {
-                Console.WriteLine("Nhap nam xay dung: ");
-                NamXayDung = int.Parse(Console.ReadLine());
-            } while (NamXayDung <= 0);
-            
-            do
-            {
-                Console.WriteLine("Nhap so tang: ");
-                SoTang = int.Parse(Console.ReadLine());
-            } while (SoTang <= 0);
-            
-        }
-
-        public override void Xuat()
-        {
-            Console.WriteLine("Dia diem la: " + DiaDiem);
-            Console.WriteLine("Gia ban la: {0} VND", GiaBan);
-            Console.WriteLine("Dien tich la: {0} m2", DienTich);
-            Console.WriteLine("Nam xay dung la: ", NamXayDung);
-            Console.WriteLine("So tang la: ", SoTang);
-        }
-    }
-
-    class ChungCu : BDS
-    {
-        private int soLuongChungCu;
-        private int tang;
-
-        public int SLChungCu
-        {
-            get { return soLuongChungCu; }
-            set { soLuongChungCu = value; }
-        }
-
-
-        public ChungCu()
-        {
-
-        }
-
-        public ChungCu(string diaDiem, float giaBan, float dienTich, int tang) : base (diaDiem, giaBan, dienTich)
-        {
-            this.tang = tang;
-        }
-
-        public override void Nhap()
-        {
-            Console.WriteLine("Nhap dia diem: ");
-            DiaDiem = Console.ReadLine();
-
-            do
-            {
-                Console.WriteLine("Nhap gia ban: (VND)");
-                GiaBan = float.Parse(Console.ReadLine());
-            } while (GiaBan < 0);
-            do
-            {
-                Console.WriteLine("Nhap dien tich: (m2)");
-                DienTich = float.Parse(Console.ReadLine());
-            } while (DienTich <= 0);
-
-            do
-            {
-                Console.WriteLine("Tang nha: ");
-                tang = int.Parse(Console.ReadLine());
-            } while (tang <= 0);
-
-        }
-
-        public override void Xuat()
-        {
-            Console.WriteLine("Dia diem la: " + DiaDiem);
-            Console.WriteLine("Gia ban la: {0} VND", GiaBan);
-            Console.WriteLine("Dien tich la: {0} m2", DienTich);
-            Console.WriteLine("Tang nha: ", tang);
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            List<BDS> listItems = ListBDS();
+            List<BatDongSan> listItem = DanhSachBDS();
+            // Show danh sách
+            ShowListSearch(listItem);
+
+            // Tổng giá bán 3 loại
+            CalcPrice(listItem);
+
+            // Show tất cả danh sách BDS
+            ShowDanhSachBDS(listItem);
+
+            // Danh sách tìm kiếm theo yêu cầu
+            SearchRequirement(listItem);
         }
 
-        private static List<BDS> ListBDS()
+        public static List<BatDongSan> DanhSachBDS()
         {
-            List<BDS> list = new List<BDS>();
+            List<BatDongSan> listBDS = new List<BatDongSan>();
             int item;
-            Console.WriteLine("-----> Chon loai hinh mong muon <-------");
-            Console.WriteLine("1. Khu dat");
-            Console.WriteLine("2. Nha pho");
-            Console.WriteLine("3. Chung cu");
-
-            item = int.Parse(Console.ReadLine());
-            switch (item)
+            do
             {
-                case 1:
-                    // Khu đất
-                    Console.WriteLine("Nhap so luong khu dat: ");
-                    int numOfLand = int.Parse(Console.ReadLine());
-                    while (numOfLand > 0)
-                    {
-                        KhuDat land = new KhuDat();
-                        land.Nhap();
-                        list.Add(land);
-                        numOfLand--;
-                    }
-                    break;
-                case 2:
-                    // Nhà phố
-                    Console.WriteLine("Nhap so luong nha pho: ");
-                    int numOfHouse = int.Parse(Console.ReadLine());
+                Console.WriteLine("-----> Chon loai hinh muon mo rong <-------");
+                Console.WriteLine("1. Khu dat");
+                Console.WriteLine("2. Nha pho");
+                Console.WriteLine("3. Chung cu");
+                Console.WriteLine("4. Exit");
+                item = int.Parse(Console.ReadLine());
+                switch (item)
+                {
+                    case 1:
+                        // Khu đất
+                        Console.WriteLine("Nhap so luong khu dat: ");
+                        int numOfLand = int.Parse(Console.ReadLine());
+                        for (int i = 0; i < numOfLand; i++)
+                        {
+                            Console.WriteLine("Nhap khu dat thu {0}", i + 1);
+                            KhuDat land = new KhuDat();
+                            land.Nhap();
+                            listBDS.Add(land);
+                        }
+                        break;
+                    case 2:
+                        // Nhà phố
+                        Console.WriteLine("Nhap so luong nha pho: ");
+                        int numOfHouse = int.Parse(Console.ReadLine());
+                        for (int i = 0; i < numOfHouse; i++)
+                        {
+                            Console.WriteLine("Nhap nha pho thu {0}", i + 1);
+                            NhaPho house = new NhaPho();
+                            house.Nhap();
+                            listBDS.Add(house);
+                        }
+                        break;
+                    case 3:
+                        // Chung cư
+                        Console.WriteLine("Nhap so luong chung cu: ");
+                        int numOfApartment = int.Parse(Console.ReadLine());
+                        for (int i = 0; i < numOfApartment; i++)
+                        {
+                            Console.WriteLine("Nhap chung cu thu {0}", i + 1);
+                            ChungCu apartment = new ChungCu();
+                            apartment.Nhap();
+                            listBDS.Add(apartment);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            } while (item != 4);
+            return listBDS;
+        }
 
-                    while (numOfHouse > 0)
-                    {
-                        NhaPho house = new NhaPho();
-                        house.Nhap();
-                        list.Add(house);
-                        numOfHouse--;
-                    }
-                    break;
-                case 3:
-                    // Chung cư
-                    Console.WriteLine("Nhap so luong chung cu: ");
-                    int numOfApartment = int.Parse(Console.ReadLine());
+        public static void ShowDanhSachBDS(List<BatDongSan> listBDS)
+        {
+            Console.WriteLine("Danh sach moi vua nhap la: ");
 
-                    while (numOfApartment > 0)
-                    {
-                        ChungCu apartment = new ChungCu();
-                        apartment.Nhap();
-                        list.Add(apartment);
-                        numOfApartment--;
-                    }
-                    break;
-                default:
-                    break;
+            foreach (BatDongSan congty in listBDS)
+            {
+                congty.Xuat();
+                Console.WriteLine("");
             }
-            return list;
+        }
+
+        private static void CalcPrice(List<BatDongSan> listBDS)
+        {
+            float TongGiaBanKhuDat = 0;
+            float TongGiaBanNhaPho = 0;
+            float TongGiaBanChungCu = 0;
+
+            foreach (BatDongSan BDS in listBDS)
+            {
+                if (BDS.LoaiHinh() == 1)
+                {
+                    TongGiaBanKhuDat += BDS.GiaBan;
+                }
+
+                if (BDS.LoaiHinh() == 2)
+                {
+                    TongGiaBanNhaPho += BDS.GiaBan;
+                }
+
+                if (BDS.LoaiHinh() == 3)
+                {
+                    TongGiaBanChungCu += BDS.GiaBan;
+                }
+            }
+
+            Console.WriteLine("Tong gia ban cua khu dat la: " + TongGiaBanKhuDat + " VND");
+            Console.WriteLine("Tong gia ban cua nha pho la: " + TongGiaBanNhaPho + " VND");
+            Console.WriteLine("Tong gia ban cua chung cu la: " + TongGiaBanChungCu + " VND");
+            Console.WriteLine("");
+        }
+
+        private static void ShowListSearch(List<BatDongSan> listBDS)
+        {
+            foreach (BatDongSan BDS in listBDS)
+            {
+                if (BDS.LoaiHinh() == 1 && BDS.DienTich > 100)
+                {
+                    BDS.Xuat();
+                }
+
+                if (BDS.LoaiHinh() == 2 && BDS.DienTich > 60 && BDS.getNamXD() >= 2019)
+                {
+                    BDS.Xuat();
+                }
+            }
+        }
+
+        private static void SearchRequirement(List<BatDongSan> listBDS)
+        {
+            Console.WriteLine("Nhap dia diem can tim kiem: ");
+            string _diadiem = Console.ReadLine();
+            Console.WriteLine("Nhap gia ban can tim kiem: ");
+            int _giaban = int.Parse(Console.ReadLine());
+            Console.WriteLine("Nhap dien tich can tim kiem: ");
+            int _dientich = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Danh sach thong tin bat dong san thoa man yeu cau");
+
+            int count;
+
+
+            count = 0;
+            foreach (BatDongSan BDS in listBDS)
+            {
+                if (BDS.DiaDiem.ToUpper() == _diadiem.ToUpper() && BDS.GiaBan <= _giaban && BDS.DienTich >= _dientich)
+                {
+                    BDS.Xuat();
+                    count++;
+                }
+            }
+
+            if (count == 0)
+            {
+                Console.WriteLine("Khong tim thay thong tin bat dong san da yeu cau!");
+            }
+
         }
     }
 }

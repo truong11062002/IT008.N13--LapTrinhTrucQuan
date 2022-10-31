@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CF23E4B-2881-40A1-8D5B-D282E00C349B}</ProjectGuid>
+    <ProjectGuid>{A0DE87F4-BB75-45AE-A7BD-EC6BA1DD89E1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Bai05</RootNamespace>
     <AssemblyName>Bai05</AssemblyName>
@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatDongSan.cs" />
+    <Compile Include="ChungCu.cs" />
+    <Compile Include="KhuDat.cs" />
+    <Compile Include="NhaPho.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

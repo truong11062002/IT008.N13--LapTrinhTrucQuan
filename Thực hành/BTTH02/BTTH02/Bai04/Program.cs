@@ -224,9 +224,6 @@ namespace Bai04
             max.InPhanSo();
         }
     }
-
-
-
     class Program
     {
 
