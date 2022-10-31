@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D6AF6E7E-766E-40A5-89DF-892679ECBA4B}</ProjectGuid>
+    <ProjectGuid>{9554AAAB-1876-4760-A6AA-70DC504F77F4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BTTH02</RootNamespace>
-    <AssemblyName>BTTH02</AssemblyName>
+    <RootNamespace>Bai03</RootNamespace>
+    <AssemblyName>Bai03</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MaTran.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

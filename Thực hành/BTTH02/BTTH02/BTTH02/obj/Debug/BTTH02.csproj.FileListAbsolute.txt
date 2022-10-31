@@ -1,7 +1,0 @@
-C:\IT008.N13\Thực hành\BTTH02\BTTH02\BTTH02\obj\Debug\BTTH02.csproj.AssemblyReference.cache
-C:\IT008.N13\Thực hành\BTTH02\BTTH02\BTTH02\obj\Debug\BTTH02.csproj.CoreCompileInputs.cache
-C:\IT008.N13\Thực hành\BTTH02\BTTH02\BTTH02\bin\Debug\BTTH02.exe.config
-C:\IT008.N13\Thực hành\BTTH02\BTTH02\BTTH02\bin\Debug\BTTH02.exe
-C:\IT008.N13\Thực hành\BTTH02\BTTH02\BTTH02\bin\Debug\BTTH02.pdb
-C:\IT008.N13\Thực hành\BTTH02\BTTH02\BTTH02\obj\Debug\BTTH02.exe
-C:\IT008.N13\Thực hành\BTTH02\BTTH02\BTTH02\obj\Debug\BTTH02.pdb
