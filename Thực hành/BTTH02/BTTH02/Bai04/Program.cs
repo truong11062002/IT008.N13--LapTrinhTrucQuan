@@ -232,23 +232,23 @@ namespace Bai04
 
             // Tổng/Hiệu/Tích/Thương của 2 phân số
 
-            //Console.WriteLine("Nhap phan so 1: ");
-            //p1.NhapPhanSo();
-            //Console.WriteLine("Nhap phan so 2: ");
-            //p2.NhapPhanSo();
+            Console.WriteLine("Nhap phan so 1: ");
+            p1.NhapPhanSo();
+            Console.WriteLine("Nhap phan so 2: ");
+            p2.NhapPhanSo();
 
-            //p3 = p3.Cong2PhanSo(p1, p2);
-            //Console.WriteLine("Tong 2 phan so la: ");
-            //p3.InPhanSo();
-            //p3 = p3.Hieu2PhanSo(p1, p2);
-            //Console.WriteLine("Hieu 2 phan so la: ");
-            //p3.InPhanSo();
-            //p3 = p3.Nhan2PhanSo(p1, p2);
-            //Console.WriteLine("Nhan 2 phan so la: ");
-            //p3.InPhanSo();
-            //p3 = p3.Chia2PhanSo(p1, p2);
-            //Console.WriteLine("Thuong 2 phan so la: ");
-            //p3.InPhanSo();
+            p3 = p3.Cong2PhanSo(p1, p2);
+            Console.WriteLine("Tong 2 phan so la: ");
+            p3.InPhanSo();
+            p3 = p3.Hieu2PhanSo(p1, p2);
+            Console.WriteLine("Hieu 2 phan so la: ");
+            p3.InPhanSo();
+            p3 = p3.Nhan2PhanSo(p1, p2);
+            Console.WriteLine("Nhan 2 phan so la: ");
+            p3.InPhanSo();
+            p3 = p3.Chia2PhanSo(p1, p2);
+            Console.WriteLine("Thuong 2 phan so la: ");
+            p3.InPhanSo();
 
 
             DayPhanSo a = new DayPhanSo();
