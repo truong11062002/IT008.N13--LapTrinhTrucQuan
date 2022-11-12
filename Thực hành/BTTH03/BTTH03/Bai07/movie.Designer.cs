@@ -301,8 +301,10 @@ namespace Bai07
             this.txt_money.ReadOnly = true;
             this.txt_money.Size = new System.Drawing.Size(289, 27);
             this.txt_money.TabIndex = 9;
+            this.txt_money.Text = "0";
+            this.txt_money.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Form1
+            // movie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -316,7 +318,7 @@ namespace Bai07
             this.Controls.Add(this.pn);
             this.Controls.Add(this.btn_chon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "movie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pn.ResumeLayout(false);

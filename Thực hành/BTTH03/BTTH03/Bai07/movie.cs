@@ -91,7 +91,7 @@ namespace Bai07
 
         private void onClick_HuyBo(object sender, EventArgs e)
         {
-            txt_money.Text = "";
+            txt_money.Text = "0";
             foreach (Button item in pn.Controls)
             {
                 if(item.BackColor == Color.Blue)
