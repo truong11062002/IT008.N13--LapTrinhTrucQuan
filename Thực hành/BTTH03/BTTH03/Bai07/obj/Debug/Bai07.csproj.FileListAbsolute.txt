@@ -1,0 +1,10 @@
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\bin\Debug\Bai07.exe.config
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\bin\Debug\Bai07.exe
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\bin\Debug\Bai07.pdb
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\obj\Debug\Bai07.csproj.AssemblyReference.cache
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\obj\Debug\Bai07.Properties.Resources.resources
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\obj\Debug\Bai07.csproj.GenerateResource.cache
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\obj\Debug\Bai07.csproj.CoreCompileInputs.cache
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\obj\Debug\Bai07.exe
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\obj\Debug\Bai07.pdb
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai07\obj\Debug\Bai07.movie.resources
