@@ -49,7 +49,6 @@ namespace Bai09
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.second_rtb.ResetText();
             string mssv = this.maSV_textbox.Text;
             string hoten = this.hoten_textBox.Text;
             string chuyennganh = this.chuyennganh_comboBox.Text;
