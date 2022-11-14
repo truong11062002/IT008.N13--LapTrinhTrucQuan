@@ -68,6 +68,34 @@ namespace Bai09
                 sqlConnection.Open();
                 sqlCommand = new SqlCommand(query, sqlConnection);
                 sqlCommand.Parameters.Add("@MSSV", SqlDbType.Char).Value = id;
+
+                sqlCommand.ExecuteNonQuery(); // Thuc thi cau lenh truy van
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+            return true;
+        }
+
+        // -------------- update chưa dùng ----------------
+        public bool update(SinhVien sinhvien)
+        {
+            SqlConnection sqlConnection = Connection.getConnection();
+            string query = "update from SINHVIEN set MSSV = @MSSV, HoTen = @HoTen, ChuyenNganh = @ChuyenNganh, GioiTinh = @GioiTinh, SoMon = @SoMon";
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.Add("@MSSV", SqlDbType.Char).Value = sinhvien.Mssv;
+                sqlCommand.Parameters.Add("@HoTen", SqlDbType.NVarChar).Value = sinhvien.Hoten;
+                sqlCommand.Parameters.Add("@ChuyenNganh", SqlDbType.NVarChar).Value = sinhvien.Chuyennganh;
+                sqlCommand.Parameters.Add("@GioiTinh", SqlDbType.NVarChar).Value = sinhvien.Gioitinh;
+                sqlCommand.Parameters.Add("@SoMon", SqlDbType.Int).Value = sinhvien.Somon;
                 sqlCommand.ExecuteNonQuery(); // Thuc thi cau lenh truy van
             }
             catch
