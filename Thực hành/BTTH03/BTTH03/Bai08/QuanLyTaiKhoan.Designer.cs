@@ -41,9 +41,14 @@ namespace Bai08
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_remove = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
-            this.listView = new System.Windows.Forms.ListView();
+            this.list1 = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tb5 = new System.Windows.Forms.TextBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -124,13 +129,13 @@ namespace Bai08
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(294, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(447, 39);
+            this.label5.Size = new System.Drawing.Size(431, 38);
             this.label5.TabIndex = 8;
             this.label5.Text = "Quản lý thông tin tài khoản";
             // 
             // btn_add
             // 
-            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.Location = new System.Drawing.Point(458, 256);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(148, 36);
@@ -148,6 +153,7 @@ namespace Bai08
             this.btn_remove.TabIndex = 10;
             this.btn_remove.Text = "Xóa";
             this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
             // btn_exit
             // 
@@ -158,15 +164,26 @@ namespace Bai08
             this.btn_exit.TabIndex = 11;
             this.btn_exit.Text = "Thoát";
             this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // listView
+            // list1
             // 
-            this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(14, 299);
-            this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(1033, 260);
-            this.listView.TabIndex = 12;
-            this.listView.UseCompatibleStateImageBehavior = false;
+            this.list1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.list1.FullRowSelect = true;
+            this.list1.GridLines = true;
+            this.list1.HideSelection = false;
+            this.list1.Location = new System.Drawing.Point(14, 298);
+            this.list1.Name = "list1";
+            this.list1.Size = new System.Drawing.Size(1033, 261);
+            this.list1.TabIndex = 12;
+            this.list1.UseCompatibleStateImageBehavior = false;
+            this.list1.View = System.Windows.Forms.View.Details;
+            this.list1.Click += new System.EventHandler(this.list_Click);
             // 
             // label6
             // 
@@ -178,23 +195,48 @@ namespace Bai08
             this.label6.TabIndex = 13;
             this.label6.Text = "Tổng tiền:";
             // 
-            // textBox5
+            // tb5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(802, 565);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(243, 28);
-            this.textBox5.TabIndex = 14;
+            this.tb5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb5.Location = new System.Drawing.Point(802, 565);
+            this.tb5.Name = "tb5";
+            this.tb5.ReadOnly = true;
+            this.tb5.Size = new System.Drawing.Size(243, 28);
+            this.tb5.TabIndex = 14;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            this.columnHeader1.Width = 40;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Mã khách hàng";
+            this.columnHeader2.Width = 104;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tên khách hàng";
+            this.columnHeader3.Width = 244;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Địa chỉ";
+            this.columnHeader4.Width = 287;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Số tiền";
+            this.columnHeader5.Width = 133;
             // 
             // QuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 599);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tb5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.listView);
+            this.Controls.Add(this.list1);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.btn_add);
@@ -207,7 +249,7 @@ namespace Bai08
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuanLyTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản";
@@ -230,9 +272,14 @@ namespace Bai08
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_remove;
         private System.Windows.Forms.Button btn_exit;
-        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ListView list1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tb5;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 
