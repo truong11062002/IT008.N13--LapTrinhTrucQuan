@@ -14,4 +14,5 @@ create table SINHVIEN
 
 select * from SINHVIEN
 
-insert into SINHVIEN values('20522087','Nguyen Nhat Truong','Khoa học máy tính', 'Nam', 5)
+insert into SINHVIEN values('20522087', N'Nguyen Nhat Truong',N'Khoa học máy tính', 'Nam', 5)
+DELETE FROM SINHVIEN WHERE MSSV='20522087'
