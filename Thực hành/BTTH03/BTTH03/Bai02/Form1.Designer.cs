@@ -40,6 +40,7 @@ namespace Bai02
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.form1MouseDown);
             this.MouseLeave += new System.EventHandler(this.form1MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.form1MouseMove);

@@ -75,6 +75,11 @@ namespace Bai05
             r = fn / sn;
 
             this.answer.Text = r.ToString();
+
+            if(this.first_num.Text == "" || this.second_num.Text == "")
+            {
+                this.answer.Text = "0";
+            }
         }
     }
 }

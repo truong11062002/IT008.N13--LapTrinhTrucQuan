@@ -41,6 +41,18 @@ namespace Bai02
             y = e.Y;
         }
 
+        private void Form_Paint(object sender, PaintEventArgs e)
+        {
+            Random rnd = new Random();
+            Label lb = new Label
+            {
+                Text = "Paint Event",
+                Top = rnd.Next(0, this.Height),
+                Left = rnd.Next(0, this.Width),
+            };
+            this.Controls.Add(lb);
+        }
+
         private void form1MouseLeave(object sender, EventArgs e)
         {
             canPaint = false;

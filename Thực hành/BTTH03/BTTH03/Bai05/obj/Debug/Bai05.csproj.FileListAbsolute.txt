@@ -7,3 +7,4 @@ C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai05\obj\Debug\Bai05.csproj.GenerateRes
 C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai05\obj\Debug\Bai05.csproj.CoreCompileInputs.cache
 C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai05\obj\Debug\Bai05.exe
 C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai05\obj\Debug\Bai05.pdb
+C:\IT008.N13\Thực hành\BTTH03\BTTH03\Bai05\obj\Debug\Bai05.csproj.AssemblyReference.cache
