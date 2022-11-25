@@ -57,15 +57,20 @@ namespace Bai09
             // --------------------
             sinhvien = new SinhVien(mssv, hoten,chuyennganh, gioitinh, somon);
 
-            if (modify.insert(sinhvien))
+            if (this.second_rtb.Text != "")
             {
-                dataGridView1.DataSource = modify.getAllSinhVien();
+                if (modify.insert(sinhvien))
+                {
+                    dataGridView1.DataSource = modify.getAllSinhVien();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi: " + "Không thêm vào được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
-            {
-                MessageBox.Show("Lỗi: " + "Không thêm vào được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+                MessageBox.Show("Vui lòng nhập đủ môn học!");
+            
         }
 
         private void button4_Click(object sender, EventArgs e)

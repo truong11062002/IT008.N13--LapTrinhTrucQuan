@@ -1,0 +1,7 @@
+C:\IT008.N13\BTTLBuoi10\BTTLBuoi10\Image_Processing\bin\Debug\Image_Processing.exe.config
+C:\IT008.N13\BTTLBuoi10\BTTLBuoi10\Image_Processing\bin\Debug\Image_Processing.exe
+C:\IT008.N13\BTTLBuoi10\BTTLBuoi10\Image_Processing\bin\Debug\Image_Processing.pdb
+C:\IT008.N13\BTTLBuoi10\BTTLBuoi10\Image_Processing\obj\Debug\Image_Processing.csproj.AssemblyReference.cache
+C:\IT008.N13\BTTLBuoi10\BTTLBuoi10\Image_Processing\obj\Debug\Image_Processing.csproj.CoreCompileInputs.cache
+C:\IT008.N13\BTTLBuoi10\BTTLBuoi10\Image_Processing\obj\Debug\Image_Processing.exe
+C:\IT008.N13\BTTLBuoi10\BTTLBuoi10\Image_Processing\obj\Debug\Image_Processing.pdb
