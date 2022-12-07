@@ -17,6 +17,30 @@ namespace Bai05
             InitializeComponent();
         }
 
-        
+        public Alumnus GetNewAlumnus()
+        {
+            while (this.ShowDialog() == DialogResult.OK)
+                try
+                {
+                    return new Alumnus
+                        (
+                            txbID.Text,
+                            txbName.Text,
+                            cbbBranch.SelectedItem.ToString(),
+                            txbAVGRecord.Text
+                        );
+                }
+                catch
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo");
+                }
+
+            return null;
+        }
+
+        private void AddForm_Load(object sender, EventArgs e)
+        {
+            this.cbbBranch.SelectedIndex = 0;
+        }
     }
 }

@@ -35,10 +35,10 @@ namespace Bai05
             this.txbName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbRecord = new System.Windows.Forms.TextBox();
-            this.cbbFaculty = new System.Windows.Forms.ComboBox();
-            this.btnAddStudent = new System.Windows.Forms.Button();
-            this.btnLeave = new System.Windows.Forms.Button();
+            this.txbAVGRecord = new System.Windows.Forms.TextBox();
+            this.cbbBranch = new System.Windows.Forms.ComboBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -97,61 +97,64 @@ namespace Bai05
             this.label4.TabIndex = 5;
             this.label4.Text = "Điểm TB";
             // 
-            // tbRecord
+            // txbAVGRecord
             // 
-            this.tbRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRecord.Location = new System.Drawing.Point(302, 343);
-            this.tbRecord.Name = "tbRecord";
-            this.tbRecord.Size = new System.Drawing.Size(131, 34);
-            this.tbRecord.TabIndex = 6;
+            this.txbAVGRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbAVGRecord.Location = new System.Drawing.Point(302, 343);
+            this.txbAVGRecord.Name = "txbAVGRecord";
+            this.txbAVGRecord.Size = new System.Drawing.Size(131, 34);
+            this.txbAVGRecord.TabIndex = 6;
             // 
-            // cbbFaculty
+            // cbbBranch
             // 
-            this.cbbFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbFaculty.FormattingEnabled = true;
-            this.cbbFaculty.Items.AddRange(new object[] {
+            this.cbbBranch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbBranch.FormattingEnabled = true;
+            this.cbbBranch.Items.AddRange(new object[] {
             "Khoa học máy tính",
             "Công nghệ thông tin",
             "Kỹ thuật phần mềm",
             "Hệ thống thông tin",
             "Kỹ thuật máy tính",
             "Mạng máy tính và truyền thông"});
-            this.cbbFaculty.Location = new System.Drawing.Point(302, 253);
-            this.cbbFaculty.Name = "cbbFaculty";
-            this.cbbFaculty.Size = new System.Drawing.Size(331, 37);
-            this.cbbFaculty.TabIndex = 7;
+            this.cbbBranch.Location = new System.Drawing.Point(302, 253);
+            this.cbbBranch.Name = "cbbBranch";
+            this.cbbBranch.Size = new System.Drawing.Size(331, 37);
+            this.cbbBranch.TabIndex = 7;
             // 
-            // btnAddStudent
+            // btnAdd
             // 
-            this.btnAddStudent.BackColor = System.Drawing.Color.Lime;
-            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddStudent.Location = new System.Drawing.Point(528, 439);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(153, 43);
-            this.btnAddStudent.TabIndex = 8;
-            this.btnAddStudent.Text = "Thêm mới";
-            this.btnAddStudent.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.Lime;
+            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(528, 439);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(153, 43);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // btnLeave
+            // btnExit
             // 
-            this.btnLeave.BackColor = System.Drawing.Color.Red;
-            this.btnLeave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLeave.Location = new System.Drawing.Point(707, 439);
-            this.btnLeave.Name = "btnLeave";
-            this.btnLeave.Size = new System.Drawing.Size(153, 43);
-            this.btnLeave.TabIndex = 9;
-            this.btnLeave.Text = "Thoát";
-            this.btnLeave.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(707, 439);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(153, 43);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 494);
-            this.Controls.Add(this.btnLeave);
-            this.Controls.Add(this.btnAddStudent);
-            this.Controls.Add(this.cbbFaculty);
-            this.Controls.Add(this.tbRecord);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.cbbBranch);
+            this.Controls.Add(this.txbAVGRecord);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txbName);
@@ -161,6 +164,7 @@ namespace Bai05
             this.Name = "AddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Sinh Viên";
+            this.Load += new System.EventHandler(this.AddForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,9 +178,9 @@ namespace Bai05
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbRecord;
-        private System.Windows.Forms.ComboBox cbbFaculty;
-        private System.Windows.Forms.Button btnAddStudent;
-        private System.Windows.Forms.Button btnLeave;
+        private System.Windows.Forms.TextBox txbAVGRecord;
+        private System.Windows.Forms.ComboBox cbbBranch;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnExit;
     }
 }

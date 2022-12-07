@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace Bai05
 {
-    class Student
+    public class Alumnus
     {
-        public Student(string mssv, string hoten, string khoa, string diemTB)
+        public Alumnus(string mssv, string hoten, string khoa, string diemTB)
         {
             ID = mssv;
             Name = hoten;
-            Faculty = khoa;
+            Branch = khoa;
             Record = float.Parse(diemTB);
         }
 
         public string ID { get; set; }
 
-
         public string Name { get; set; }
 
-        public string Faculty { get; set; }
+        public string Branch { get; set; }
 
         public float Record { get; set; }
     }
