@@ -22,5 +22,9 @@ namespace Bai01
             MessageBox.Show("button: " + e.Button.ToString() + "\nlocation: " + e.Location.ToString(), "mouseclick");
         }
 
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("ASCII: " + Convert.ToInt32(e.KeyChar).ToString() + "\nkey: " + e.KeyChar.ToString(), "keypress");
+        }
     }
 }

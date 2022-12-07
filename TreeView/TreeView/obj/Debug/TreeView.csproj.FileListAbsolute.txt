@@ -1,0 +1,10 @@
+C:\IT008.N13\TreeView\TreeView\bin\Debug\TreeView.exe.config
+C:\IT008.N13\TreeView\TreeView\bin\Debug\TreeView.exe
+C:\IT008.N13\TreeView\TreeView\bin\Debug\TreeView.pdb
+C:\IT008.N13\TreeView\TreeView\obj\Debug\TreeView.csproj.AssemblyReference.cache
+C:\IT008.N13\TreeView\TreeView\obj\Debug\TreeView.Form1.resources
+C:\IT008.N13\TreeView\TreeView\obj\Debug\TreeView.Properties.Resources.resources
+C:\IT008.N13\TreeView\TreeView\obj\Debug\TreeView.csproj.GenerateResource.cache
+C:\IT008.N13\TreeView\TreeView\obj\Debug\TreeView.csproj.CoreCompileInputs.cache
+C:\IT008.N13\TreeView\TreeView\obj\Debug\TreeView.exe
+C:\IT008.N13\TreeView\TreeView\obj\Debug\TreeView.pdb
