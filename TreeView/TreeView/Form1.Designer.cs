@@ -1,5 +1,5 @@
 ﻿
-namespace Bai05
+namespace TreeView
 {
     partial class Form1
     {
@@ -29,13 +29,31 @@ namespace Bai05
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.tv = new System.Windows.Forms.TreeView();
+            this.SuspendLayout();
+            // 
+            // tv
+            // 
+            this.tv.Location = new System.Drawing.Point(45, 38);
+            this.tv.Name = "tv";
+            this.tv.Size = new System.Drawing.Size(556, 406);
+            this.tv.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(948, 503);
+            this.Controls.Add(this.tv);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TreeView tv;
     }
 }
 
