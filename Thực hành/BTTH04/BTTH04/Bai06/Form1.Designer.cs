@@ -31,17 +31,17 @@ namespace Bai06
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtTarget = new System.Windows.Forms.TextBox();
+            this.txtSource = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtSource = new System.Windows.Forms.TextBox();
-            this.txtTarget = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,54 +64,37 @@ namespace Bai06
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sao chép tập tin ";
             // 
-            // groupBox2
+            // txtTarget
             // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.progressBar1);
-            this.groupBox2.Location = new System.Drawing.Point(26, 366);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(917, 89);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tiến trình sao chép ";
+            this.txtTarget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTarget.Location = new System.Drawing.Point(252, 186);
+            this.txtTarget.Name = "txtTarget";
+            this.txtTarget.ReadOnly = true;
+            this.txtTarget.Size = new System.Drawing.Size(585, 30);
+            this.txtTarget.TabIndex = 10;
             // 
-            // label1
+            // txtSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Đường dẫn thư mục nguồn ";
+            this.txtSource.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSource.Location = new System.Drawing.Point(252, 77);
+            this.txtSource.Name = "txtSource";
+            this.txtSource.ReadOnly = true;
+            this.txtSource.Size = new System.Drawing.Size(585, 30);
+            this.txtSource.TabIndex = 9;
             // 
-            // label2
+            // button3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Đường dẫn thư mục đích";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(45, 37);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(845, 35);
-            this.progressBar1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(843, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "...";
-            this.toolTip1.SetToolTip(this.button1, "Chọn thư mục nguồn");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(376, 273);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(173, 35);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Sao chép";
+            this.toolTip1.SetToolTip(this.button3, "Click vào để sao chép");
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -124,36 +107,47 @@ namespace Bai06
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(376, 273);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 35);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Sao chép";
-            this.toolTip1.SetToolTip(this.button3, "Click vào để sao chép");
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button1.Location = new System.Drawing.Point(843, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 32);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "...";
+            this.toolTip1.SetToolTip(this.button1, "Chọn thư mục nguồn");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtSource
+            // label2
             // 
-            this.txtSource.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSource.Location = new System.Drawing.Point(252, 77);
-            this.txtSource.Name = "txtSource";
-            this.txtSource.ReadOnly = true;
-            this.txtSource.Size = new System.Drawing.Size(585, 30);
-            this.txtSource.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Đường dẫn thư mục đích";
             // 
-            // txtTarget
+            // label1
             // 
-            this.txtTarget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTarget.Location = new System.Drawing.Point(252, 186);
-            this.txtTarget.Name = "txtTarget";
-            this.txtTarget.ReadOnly = true;
-            this.txtTarget.Size = new System.Drawing.Size(585, 30);
-            this.txtTarget.TabIndex = 10;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Đường dẫn thư mục nguồn ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.progressBar1);
+            this.groupBox2.Location = new System.Drawing.Point(26, 366);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(917, 89);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tiến trình sao chép ";
             // 
             // label3
             // 
@@ -164,6 +158,13 @@ namespace Bai06
             this.label3.Size = new System.Drawing.Size(35, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "0%";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(45, 37);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(845, 35);
+            this.progressBar1.TabIndex = 0;
             // 
             // label4
             // 

@@ -29,26 +29,53 @@ namespace Bai05
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
-            
+            AddNewStudent();
+        }
+        private void tsmAdd_Click(object sender, EventArgs e)
+        {
+            AddNewStudent();
         }
 
         private void AddNewStudent()
         {
+            Alumnus newAlumnus = GetNewAlumnusFromAddForm();
 
+            UpdateDataDridView(newAlumnus);
         }
-        
 
-        private void UpdateDataDridView(Student student)
+        private Alumnus GetNewAlumnusFromAddForm()
         {
-            if (student == null)
+            return new AddForm().GetNewAlumnus();
+        }
+        private bool ShowIfNameContainKeyWord(int index, string keyWord)
+        {
+            string Name = dgvStudent.Rows[index].Cells[2].Value.ToString().ToLower();
+            keyWord.ToLower();
+
+            return Name.Contains(keyWord);
+        }
+
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+            int maxRow = dgvStudent.RowCount - 1;
+            string keyWord = txbSearch.Text;
+
+            for (int i = 0; i < maxRow; i++)
+            {
+                dgvStudent.Rows[i].Visible = ShowIfNameContainKeyWord(i, keyWord);
+            }
+        }
+
+        private void UpdateDataDridView(Alumnus newAlumnus)
+        {
+            if (newAlumnus == null)
             {
                 return;
             }
 
             string[] row = new string[]
             {
-                dgvStudent.Rows.Count.ToString(),student.ID,student.Name,student.Faculty,student.Record.ToString()
+                dgvStudent.Rows.Count.ToString(),newAlumnus.ID,newAlumnus.Name,newAlumnus.Branch,newAlumnus.Record.ToString()
             };
 
             dgvStudent.Rows.Add(row);
@@ -82,6 +109,11 @@ namespace Bai05
             dgvStudent.Columns[4].Resizable = DataGridViewTriState.False;
 
             dgvStudent.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void tsmExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

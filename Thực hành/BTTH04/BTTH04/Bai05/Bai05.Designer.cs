@@ -34,10 +34,10 @@ namespace Bai05
             this.tsmAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.txbSearch = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
@@ -67,14 +67,17 @@ namespace Bai05
             // tsmAdd
             // 
             this.tsmAdd.Name = "tsmAdd";
-            this.tsmAdd.Size = new System.Drawing.Size(159, 26);
+            this.tsmAdd.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.tsmAdd.Size = new System.Drawing.Size(224, 26);
             this.tsmAdd.Text = "Thêm mới";
+            this.tsmAdd.Click += new System.EventHandler(this.tsmAdd_Click);
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(159, 26);
+            this.tsmExit.Size = new System.Drawing.Size(224, 26);
             this.tsmExit.Text = "Thoát";
+            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
             // toolStrip1
             // 
@@ -90,6 +93,16 @@ namespace Bai05
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = global::Bai05.Properties.Resources.man;
+            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(153, 44);
+            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // txbSearch
             // 
             this.txbSearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -98,6 +111,7 @@ namespace Bai05
             this.txbSearch.Name = "txbSearch";
             this.txbSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txbSearch.Size = new System.Drawing.Size(180, 47);
+            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
             // 
             // toolStripLabel1
             // 
@@ -119,16 +133,6 @@ namespace Bai05
             this.dgvStudent.Size = new System.Drawing.Size(942, 466);
             this.dgvStudent.TabIndex = 2;
             this.dgvStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellContentClick);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Image = global::Bai05.Properties.Resources.man;
-            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(153, 44);
-            this.btnAdd.Text = "Thêm mới";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Bai05
             // 
